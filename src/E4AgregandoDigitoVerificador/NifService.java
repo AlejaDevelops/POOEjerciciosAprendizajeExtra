@@ -39,7 +39,7 @@ public class NifService {
     }
     
     public char calcularDni(Nif a){
-       char arrayCaracteres[] = {'T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q','V','H','L','C','K','E' };      
+       char arrayCaracteres[] = {'T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q','V','H','L','C','K','E'};      
        int remainder = (int)a.getDni()%23;
        
        return arrayCaracteres[remainder];      

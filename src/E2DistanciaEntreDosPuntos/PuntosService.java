@@ -21,10 +21,10 @@ public class PuntosService {
         System.out.println("X1");
         puntos.setX1(leer.nextInt());
         System.out.println("Y1");
-        puntos.setX2(leer.nextInt());
+        puntos.setY1(leer.nextInt());
         System.out.println("Ingrese las coordenadas del punto 2");
         System.out.println("X2");
-        puntos.setY1(leer.nextInt());
+        puntos.setX2(leer.nextInt());
         System.out.println("Y2");
         puntos.setY2(leer.nextInt());
         
@@ -36,7 +36,7 @@ public class PuntosService {
     public void distanciaEntreDosPuntos (Puntos a){
         double distancia;
         
-        distancia =  Math.sqrt((Math.pow(a.getX2()- a.getX1(),2))+(Math.pow(a.getY2()-a.getY1(),2)));
+        distancia =  Math.sqrt(Math.pow(a.getX2()- a.getX1(),2)+(Math.pow(a.getY2()-a.getY1(),2)));
         System.out.println("La distancia entre ("+a.getX1()+","+a.getX2()+") y ("+a.getY1()+","+a.getY2()+") es "+distancia);
     }
 }
