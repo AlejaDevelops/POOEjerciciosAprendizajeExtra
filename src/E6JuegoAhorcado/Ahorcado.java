@@ -30,16 +30,20 @@ package E6JuegoAhorcado;
  */
 public class Ahorcado {
     private String[] palabra;
-    private int cantLetras;
-    private int cantJuagadasMax;
+    private int nLetrasEncontradas;
+    private int nJugadasMax;
+    private String[] palabraAux; //Se irá llenando con las letras encontradas
+    private String[] letrasIngresadas; //Se irá llenando con las letras ingresadas pero que no están en la palabra
 
     public Ahorcado() {
     }
 
-    public Ahorcado(String[] palabra, int cantLetras, int cantJuagadasMax) {
+    public Ahorcado(String[] palabra, int nLetrasEncontradas, int nJugadasMax, String[] palabraAux, String[] letrasIngresadas) {
         this.palabra = palabra;
-        this.cantLetras = cantLetras;
-        this.cantJuagadasMax = cantJuagadasMax;
+        this.nLetrasEncontradas = nLetrasEncontradas;
+        this.nJugadasMax = nJugadasMax;
+        this.palabraAux = palabraAux;
+        this.letrasIngresadas = letrasIngresadas;
     }
 
     public String[] getPalabra() {
@@ -50,28 +54,44 @@ public class Ahorcado {
         this.palabra = palabra;
     }
 
-    public int getCantLetras() {
-        return cantLetras;
+    public int getnLetrasEncontradas() {
+        return nLetrasEncontradas;
     }
 
-    public void setCantLetras(int cantLetras) {
-        this.cantLetras = cantLetras;
+    public void setnLetrasEncontradas(int nLetrasEncontradas) {
+        this.nLetrasEncontradas = nLetrasEncontradas;
     }
 
-    public int getCantJuagadasMax() {
-        return cantJuagadasMax;
+    public int getnJugadasMax() {
+        return nJugadasMax;
     }
 
-    public void setCantJuagadasMax(int cantJuagadasMax) {
-        this.cantJuagadasMax = cantJuagadasMax;
+    public void setnJugadasMax(int nJugadasMax) {
+        this.nJugadasMax = nJugadasMax;
+    }
+
+    public String[] getPalabraAux() {
+        return palabraAux;
+    }
+
+    public void setPalabraAux(String[] palabraAux) {
+        this.palabraAux = palabraAux;
+    }
+
+    public String[] getLetrasIngresadas() {
+        return letrasIngresadas;
+    }
+
+    public void setLetrasIngresadas(String[] letrasIngresadas) {
+        this.letrasIngresadas = letrasIngresadas;
     }
 
     @Override
     public String toString() {
-        return "Ahorcado{" + "palabra=" + palabra + ", cantLetras=" + cantLetras + ", cantJuagadasMax=" + cantJuagadasMax + '}';
+        return "Ahorcado{" + "palabra=" + palabra + ", nLetrasEncontradas=" + nLetrasEncontradas + ", nJugadasMax=" + nJugadasMax + ", palabraAux=" + palabraAux + ", letrasIngresadas=" + letrasIngresadas + '}';
     }
-    
-    
-    
-    
+
+
 }
+
+   

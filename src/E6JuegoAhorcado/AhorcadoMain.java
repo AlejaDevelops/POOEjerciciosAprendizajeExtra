@@ -24,17 +24,29 @@ se quede sin intentos. Este método se llamará en el main.
  */
 package E6JuegoAhorcado;
 
+//import java.util.Arrays;
+//import java.util.Scanner;
+
+
 /**
  *
  * @author AlejaDevelops
  */
 public class AhorcadoMain {
     public static void main(String[] args) {
+        System.out.println("*** JUEGO DEL AHORCADO ***");
+        AhorcadoService as = new AhorcadoService();
+        Ahorcado juegoA = as.crearJuego();
+        
+        as.juego(juegoA);
+        
+       
+        
+                
         
     }
            
-    AhorcadoService as = new AhorcadoService();
-    Ahorcado juegoA = as.crearJuego();
+    
     
     
     
