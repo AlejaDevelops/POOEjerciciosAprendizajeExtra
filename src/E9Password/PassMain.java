@@ -27,7 +27,7 @@ SINO impedir cambios
 o D) Modificar DNI, donde primero debe poner su contraseña para dar permiso,
 SINO impedir cambios
  */
-package E8Password;
+package E9Password;
 
 /**
  *
@@ -35,7 +35,10 @@ package E8Password;
  */
 public class PassMain {
     public static void main(String[] args) {
-        
+        System.out.println("*** CONTROL DE DATOS DE USUARIO ***");
+        PassService ps = new PassService();
+        Pass cliente1 = ps.ingresoDatos();      
+        ps.menu(cliente1);
         
     }
     
