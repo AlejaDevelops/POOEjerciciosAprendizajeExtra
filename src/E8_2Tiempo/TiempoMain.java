@@ -15,7 +15,8 @@ import java.awt.BorderLayout;
  */
 public class TiempoMain {
     public static void main(String[] args) {
-        System.out.println("*** Registro del tiempo ***");
+        System.out.println("*** Registro del tiempo y compativo con la hora actual***");
+        System.out.println("Ingresa una hora de inicio del día actual");
         TiempoService ts = new TiempoService();
         Tiempo tiempo1 = ts.tomarTiempo();
         

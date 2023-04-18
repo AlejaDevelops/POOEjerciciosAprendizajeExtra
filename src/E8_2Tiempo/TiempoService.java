@@ -8,7 +8,9 @@ animas a simular el paso del tiempo en consola??????
  */
 package E8_2Tiempo;
 
+import java.time.Duration;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.Scanner;
 
 /**
@@ -78,11 +80,22 @@ public class TiempoService {
     return tiempo2;
     }
     
-    public Tiempo pasoDelTiempo(Tiempo b, Tiempo c){ //PENDIENTE ARREGLAR FORMA DE CALCULAR DIFERENCIA
-        Tiempo d = new Tiempo();        
-        d.setHora(b.getHora()-c.getHora());
-        d.setMinutos(b.getMinutos()-c.getMinutos());
-        d.setSegundos(b.getSegundos()-c.getSegundos());
+    public Tiempo pasoDelTiempo(Tiempo b, Tiempo c){ 
+        Tiempo d = new Tiempo();  
+        
+        LocalTime horaInicio = LocalTime.of(b.getHora(), b.getMinutos(), b.getSegundos());
+        LocalTime horaFin = LocalTime.of(c.getHora(), c.getMinutos(), c.getSegundos());
+        Duration duracion = Duration.between(horaInicio, horaFin); //Calcula la diferencia entre las dos horas
+        
+        long segTotales = duracion.getSeconds(); //Obtiene el tiempo total transcurrido en segundos
+        System.out.println("Tiempo transcurrido total: "+segTotales+" seg");
+        int horas = (int)segTotales/3600;
+        int min = (int)((segTotales%3600)/60);
+        int seg = (int)((segTotales%3600)%60);
+        
+        d.setHora(horas);
+        d.setMinutos(min);
+        d.setSegundos(seg);
         return d;
     }
             
