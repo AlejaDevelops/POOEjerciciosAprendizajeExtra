@@ -144,6 +144,7 @@ public class AhorcadoService {
                     System.out.println("Esta letra ya la has ingresado antes. Intenta nuevamente");
                     break;
                 }
+            
             }*/
             
             boolean respuestaEncontradas = (encontradas(e, letra)); 

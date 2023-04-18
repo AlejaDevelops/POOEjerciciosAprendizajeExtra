@@ -27,19 +27,55 @@ SINO impedir cambios
 o D) Modificar DNI, donde primero debe poner su contraseña para dar permiso,
 SINO impedir cambios
  */
-package E9Password;
+package E9_Password;
 
 /**
  *
  * @author Computador 1
  */
-public class PassMain {
-    public static void main(String[] args) {
-        System.out.println("*** CONTROL DE DATOS DE USUARIO ***");
-        PassService ps = new PassService();
-        Pass cliente1 = ps.ingresoDatos();      
-        ps.menu(cliente1);
-        
+public class Pass {
+    
+    private String pass;
+    private String nombre;
+    private long dni;
+
+    public Pass() {
     }
+
+    public Pass(String pass, String nombre, long dni) {
+        this.pass = pass;
+        this.nombre = nombre;
+        this.dni = dni;
+    }
+
+    public String getPass() {
+        return pass;
+    }
+
+    public void setPass(String pass) {
+        this.pass = pass;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public long getDni() {
+        return dni;
+    }
+
+    public void setDni(long dni) {
+        this.dni = dni;
+    }
+
+    @Override
+    public String toString() {
+        return "Pass{" + "pass=" + pass + ", nombre=" + nombre + ", dni=" + dni + '}';
+    }
+    
     
 }

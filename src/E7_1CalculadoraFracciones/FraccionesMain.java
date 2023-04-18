@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package E7CalculadoraFracciones;
+package E7_1CalculadoraFracciones;
 
 /**
  *

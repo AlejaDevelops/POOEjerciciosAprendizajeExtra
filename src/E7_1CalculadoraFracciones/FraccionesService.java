@@ -3,7 +3,7 @@ Crear una clase llamada fracción que contenga 4 atributos (denominador y numera
 fracción). Crear la clase servicio que contenga métodos para sumar, restar, multiplicar y dividir
 fracciones. Mostrar por pantalla un menú de opciones para que el usuario decida que ver.
  */
-package E7CalculadoraFracciones;
+package E7_1CalculadoraFracciones;
 
 import java.util.Scanner;
 
