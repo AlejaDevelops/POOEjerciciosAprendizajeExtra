@@ -27,7 +27,7 @@ SINO impedir cambios
 o D) Modificar DNI, donde primero debe poner su contraseña para dar permiso,
 SINO impedir cambios
  */
-package E9_Password;
+package E9_3Password;
 
 import java.util.Scanner;
 

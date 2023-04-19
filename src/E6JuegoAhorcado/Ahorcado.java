@@ -32,18 +32,16 @@ public class Ahorcado {
     private String[] palabra;
     private int nLetrasEncontradas;
     private int nJugadasMax;
-    private String[] palabraAux; //Se irá llenando con las letras encontradas
-    private String[] letrasIngresadas; //Se irá llenando con las letras ingresadas pero que no están en la palabra
+    private String[] palabraAux; //Se irá llenando con las letras encontradas   
 
     public Ahorcado() {
     }
 
-    public Ahorcado(String[] palabra, int nLetrasEncontradas, int nJugadasMax, String[] palabraAux, String[] letrasIngresadas) {
+    public Ahorcado(String[] palabra, int nLetrasEncontradas, int nJugadasMax, String[] palabraAux) {
         this.palabra = palabra;
         this.nLetrasEncontradas = nLetrasEncontradas;
         this.nJugadasMax = nJugadasMax;
         this.palabraAux = palabraAux;
-        this.letrasIngresadas = letrasIngresadas;
     }
 
     public String[] getPalabra() {
@@ -77,21 +75,7 @@ public class Ahorcado {
     public void setPalabraAux(String[] palabraAux) {
         this.palabraAux = palabraAux;
     }
-
-    public String[] getLetrasIngresadas() {
-        return letrasIngresadas;
-    }
-
-    public void setLetrasIngresadas(String[] letrasIngresadas) {
-        this.letrasIngresadas = letrasIngresadas;
-    }
-
-    @Override
-    public String toString() {
-        return "Ahorcado{" + "palabra=" + palabra + ", nLetrasEncontradas=" + nLetrasEncontradas + ", nJugadasMax=" + nJugadasMax + ", palabraAux=" + palabraAux + ", letrasIngresadas=" + letrasIngresadas + '}';
-    }
-
-
+    
+    
 }
-
    
