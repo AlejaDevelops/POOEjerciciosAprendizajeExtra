@@ -15,10 +15,31 @@ mes)
  */
 package E10_4Fecha;
 
+
+
 /**
  *
  * @author AlejaDevelops
  */
 public class FechaMain {
+    public static void main(String[] args) {
+        
+        
+        FechaService fs = new FechaService();
+        Fecha fecha1 = fs.crearFecha();
+        
+        boolean bisiesto = fs.verificarAnio(fecha1);
+        if (bisiesto) {
+            System.out.println("El año "+fecha1.getAnio()+" si es bisiesto");
+        }else{
+            System.out.println("El año "+fecha1.getAnio()+" no es bisiesto");
+        }           
+        
+        System.out.println("El mes ingresado tiene "+fs.diasDelMes(fecha1)+" dias");        
+        fs.diaAnterior(fecha1);
+        fs.diaPosterior(fecha1);
+    }
     
+        
+ 
 }
