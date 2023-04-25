@@ -15,7 +15,7 @@ package E12_6SopaLetras;
 
 /**
  *
- * @author Computador 1
+ * @author AlejaDevelops
  */
 public class SopaLetrasMain {
     public static void main(String[] args) {
@@ -26,5 +26,7 @@ public class SopaLetrasMain {
         System.out.println("");
         System.out.println("MATRIZ INICIAL");
         sls.imprimir(sopa1);
+        System.out.println("MATRIZ REEMPLAZO");
+        sls.reemplazar(sopa1);
     }
 }

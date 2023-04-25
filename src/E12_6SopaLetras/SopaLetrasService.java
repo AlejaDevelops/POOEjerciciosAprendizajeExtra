@@ -21,7 +21,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Computador 1
+ * @author AlejaDevelops
  */
 public class SopaLetrasService {
     Scanner leer = new Scanner(System.in);
@@ -29,7 +29,7 @@ public class SopaLetrasService {
         SopaLetras sopa1 = new SopaLetras();
         System.out.println("Cargando sopa de letras...");
         char[][] matriz = new char[][]{
-            {'p', 'e', 'r', 'r', 'o', 'c', 'a', 't', 'o', 'r'},
+            {'p', 'e', 'r', 'r', 'o', 'p', 'e', 'r', 'r', 'o'},
             {'a', 's', 'i', 't', 'i', 'o', 'c', 'e', 'r', 'o'},
             {'l', 'e', 'c', 'h', 'e', 'm', 'o', 't', 'o', 'r'},
             {'o', 's', 'o', 's', 'o', 's', 'o', 's', 'o', 's'},
@@ -84,11 +84,34 @@ public class SopaLetrasService {
         
     }
     
-    public void reemplazar(SopaLetras c){
+    public void reemplazar(SopaLetras c) {
         System.out.println("Ingrese la palabra que desea reemplazar (que ya se encuentra en la matriz)");
         c.setPalabra(leer.nextLine());
         System.out.println("Ingrese la palabra nueva");
         String palabraNueva = leer.nextLine();
         buscarPalabra(c);//DEBE DEVOLVER LAS POSICIONES DONDE ENCONTRÓ LA PALABRA
+       
+        
+        for (int i = 0; i < c.getMatriz().length; i++) {
+            for (int j = 0; j < c.getMatriz()[0].length; j++) {
+                if (c.getMatriz()[i][j] == c.getPalabra().charAt(0)) {
+                    if (j + c.getPalabra().length() <= c.getMatriz().length) {
+                        
+                        String palabra2 = new String(c.getMatriz()[i], j, c.getPalabra().length()); //Sobrecarga de constructor 
+                        
+                        if (palabra2.equalsIgnoreCase(c.getPalabra())) {
+                            int z =0;
+                            for (int k = j; k < j+palabraNueva.length(); k++) {                                
+                                c.getMatriz()[i][k] = palabraNueva.charAt(z); //Z: recorre laos caracteres de palabraNueva
+                                z++;                              
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        imprimir(c);
+
     }
 }

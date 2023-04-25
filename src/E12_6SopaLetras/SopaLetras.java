@@ -15,7 +15,7 @@ package E12_6SopaLetras;
 
 /**
  *
- * @author Computador 1
+ * @author AlejaDevelops
  */
 public class SopaLetras {
     private char[][] matriz;
